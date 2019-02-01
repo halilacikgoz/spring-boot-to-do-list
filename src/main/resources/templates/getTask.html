@@ -1,0 +1,29 @@
+<!DOCTYPE  html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Hello, Spring</title>
+</head>
+<body>
+
+
+	<table>
+		
+		<tbody>
+
+			<tr>
+				<td>Task Title</td> <td><br></td>
+				<td><input style="width:200px " type="text" name="taskname" th:value="${task.name}"> </td>
+				<td> <br></td>
+
+			</tr>
+			<tr>
+				<td>Task Content</td> <td><br></td>
+				<td><input style="height:200px; width:200px " type="text" name="taskcontent" th:value="${task.content}"></td>
+			</tr>
+
+		</tbody>
+	</table>
+</body>
+
+</html>

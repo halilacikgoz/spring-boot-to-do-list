@@ -1,0 +1,33 @@
+<!DOCTYPE  html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>All Tasks</title>
+</head>
+<body>
+
+
+	<table>
+		<thead>
+			<tr>
+				<th>Task Title</th>
+				<th>....</th>
+				<th>Task Content</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:if="${tasks.empty}">
+				<td colspan="3" align="center">No Tasks</td>
+			</tr>
+			<tr th:each="task : ${tasks}">
+				<td><span th:text="${task.name}"> Name </span></td>
+				<td>....</td>
+				<td><span th:text="${task.content}"> Content </span></td>
+				<!--  <td><a href="http://localhost:8080/tasks/${task.id}" class="btn btn-default">Go to Google</a></td> -->
+			</tr>
+
+		</tbody>
+	</table>
+</body>
+
+</html>
